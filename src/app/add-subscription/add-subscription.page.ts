@@ -25,6 +25,10 @@ export class AddSubscriptionPage {
 
   saveSubscription() {
     console.log('Saving subscription:', this.subscription);
+<<<<<<< HEAD
+=======
+    // Later we will save to storage
+>>>>>>> c3f8f4d98d5169d95987fecdc85ccb675ae74d6b
     this.router.navigate(['/home']);
   }
 }
