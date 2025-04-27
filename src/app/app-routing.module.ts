@@ -1,24 +1,22 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import { HomePage } from './home/home.page';
+import { AddSubscriptionPage } from './add-subscription/add-subscription.page';
 
 const routes: Routes = [
-  {
-    path: 'home',
-    loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
-  },
   {
     path: '',
     redirectTo: 'home',
     pathMatch: 'full'
   },
   {
-    path: 'add-subscription',
-    loadChildren: () => import('./add-subscription/add-subscription.module').then( m => m.AddSubscriptionPageModule)
+    path: 'home',
+    component: HomePage
   },
   {
-    path: 'home',
-    loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
-  },
+    path: 'add-subscription',
+    component: AddSubscriptionPage
+  }
 ];
 
 @NgModule({
@@ -27,4 +25,4 @@ const routes: Routes = [
   ],
   exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}
